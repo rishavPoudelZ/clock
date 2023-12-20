@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"   integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous"  referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="modal.css">
+	<link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>clock</title>
+</head>
+<body>
+    <div id="container">
+		<div id="border">
+			<div id="location"><i class="fa-solid fa-pen-to-square" id="button" data-micromodal-trigger="modal-1"></i></div>
+			<div id="time"></div>
+			<div id="date"></div>
+		</div>
+	</div>
+	<!-- modal start -->
+	<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		  <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+			<header class="modal__header">
+			  <h2 class="modal__title" id="modal-1-title">
+				Change Timezone
+			  </h2>
+			  <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+			</header>
+			<main class="modal__content" id="modal-1-content">
+			  <select name="Timezone" id="Timezone">
+				<option value="Asia/Kathmandu">Asia,Kathmandu</option>
+				<option value="America/Toronto">America,Toronto</option>
+				<option value="Asia/Tokyo">Asia,Tokyo</option>
+				<option value="Europe/london">Europe,london</option>
+			  </select>
+			</main>
+			<footer class="modal__footer">
+			  <button class="modal__btn modal__btn-primary" aria-label="Close modal"  id="changeTimezone">Continue</button>
+			  <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+			</footer>
+		  </div>
+		</div>
+	  </div>
+</body>
+<script src="dist/main.js"></script>
+</html>
